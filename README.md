@@ -80,8 +80,8 @@ racer.orm('players.*', PlayerModel)
 
 // ...
 
-async function main (model) {
-  let $games = model.scope('games')
+async function main ($root) {
+  let $games = $root.scope('games')
   let gameId = await $games.addNew('userId1', { name: 'Cool game' })
   let $game = $games.at(gameId)
   for (let userIds of ['userId1', 'userId2', 'userId3']) {
