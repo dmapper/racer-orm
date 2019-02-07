@@ -145,11 +145,11 @@ racer.orm('players.*', PlayerFactory)
 You can optionally specify an alias for the ORM Entity:
 
 ```js
-racer.orm('players.*', PlayersModel, 'Player')
+racer.orm('players.*', PlayerModel, 'Player')
 ```
 
-This will allow you explicitly specify in `.at()` and `.scope()`
-which ORM Entity must be used even for the unknown path patters:
+This will allow you to explicitly specify in `.at()` and `.scope()`
+which ORM Entity to use even for the unknown path patters:
 
 ```js
 let playerId = 'playerId1'
@@ -166,9 +166,9 @@ model.scope('_session.myPlayer', 'Player').alert('please join the game!')
 It's always better to list all your path patterns explicitly and don't use aliases at all:
 
 ```js
-racer.orm('players.*', PlayersModel)
-racer.orm('_session.myPlayer', PlayersModel)
-racer.orm('_session.rivalPlayer', PlayersModel)
+racer.orm('players.*', PlayerModel)
+racer.orm('_session.myPlayer', PlayerModel)
+racer.orm('_session.rivalPlayer', PlayerModel)
 ```
 
 ## Licence
