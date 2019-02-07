@@ -4,7 +4,7 @@ ORM system for Racer.js and ShareDB
 ## What it does
 
 Lets you automatically override your scope models
-(created with `.at()` and `.scope`) with the additional methods.
+(created with `.at()` and `.scope()`) with the additional methods.
 
 ## Usage
 
